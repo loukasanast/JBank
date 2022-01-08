@@ -4,6 +4,7 @@ import io.anastasiou.Account;
 import io.anastasiou.Transaction;
 import io.anastasiou.TransactionException;
 import io.anastasiou.TransactionType;
+import io.anastasiou.repository.Repository;
 import io.anastasiou.repository.SqlRepository;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.Scanner;
 public class BankTransactor implements Transactor {
     private static final Account account = new Account();
     private static final Scanner scanner = new Scanner(System.in);
-    private static final SqlRepository repo = new SqlRepository();
+    private static final Repository repo = new SqlRepository();
 
     @Override
     public void printTransactions() {
