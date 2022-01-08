@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BankTransactor implements Transactor {
-    private static final Account account = new Account();
+    private static final Account account = Account.getInstance();
     private static final Scanner scanner = new Scanner(System.in);
     private static final Repository<Transaction> repo = new SqlRepository();
 

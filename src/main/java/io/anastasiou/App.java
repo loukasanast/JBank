@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class App
 {
-    private static final Account account = new Account();
+    private static final Account account = Account.getInstance();
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args)

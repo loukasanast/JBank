@@ -5,10 +5,19 @@ import java.util.Objects;
 public class Account {
     private String firstName;
     private String lastName;
+    private static Account INSTANCE;
 
-    public Account() {
+    private Account() {
         firstName = "John";
         lastName = "Doe";
+    }
+
+    public static Account getInstance() {
+        if(INSTANCE == null) {
+            INSTANCE = new Account();
+        }
+
+        return INSTANCE;
     }
 
     public String getFirstName() {
