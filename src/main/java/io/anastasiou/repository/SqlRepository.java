@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SqlRepository implements Repository {
+public class SqlRepository implements Repository<Transaction> {
     @Override
     public List<Transaction> getAll() {
         List<Transaction> result = new ArrayList<>();

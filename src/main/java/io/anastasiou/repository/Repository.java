@@ -5,7 +5,7 @@ import io.anastasiou.TransactionException;
 
 import java.util.List;
 
-public interface Repository {
+public interface Repository<T> {
     List<Transaction> getAll();
-    void add(Transaction transaction) throws TransactionException;
+    void add(T transaction) throws TransactionException;
 }

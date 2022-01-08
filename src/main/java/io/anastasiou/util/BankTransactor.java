@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class BankTransactor implements Transactor {
     private static final Account account = new Account();
     private static final Scanner scanner = new Scanner(System.in);
-    private static final Repository repo = new SqlRepository();
+    private static final Repository<Transaction> repo = new SqlRepository();
 
     @Override
     public void printTransactions() {
