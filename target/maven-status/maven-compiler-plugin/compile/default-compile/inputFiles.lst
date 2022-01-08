@@ -1,7 +1,11 @@
 C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\App.java
 C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\Transaction.java
+C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\util\BankTransactor.java
 C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\repository\Repository.java
 C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\TransactionType.java
 C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\UnauthorizedException.java
+C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\TransactionException.java
+C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\util\Transactor.java
 C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\Account.java
 C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\repository\SqlRepository.java
+C:\Users\Lucas\IdeaProjects\JBank\src\main\java\io\anastasiou\util\Authenticator.java
