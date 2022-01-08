@@ -1,10 +1,8 @@
 package io.anastasiou;
 
-import io.anastasiou.repository.SqlRepository;
 import io.anastasiou.util.Authenticator;
 import io.anastasiou.util.BankTransactor;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class App
