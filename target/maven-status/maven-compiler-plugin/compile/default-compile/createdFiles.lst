@@ -1,7 +1,11 @@
+io\anastasiou\util\Transactor.class
+io\anastasiou\util\BankTransactor.class
 io\anastasiou\repository\Repository.class
 io\anastasiou\App.class
 io\anastasiou\repository\SqlRepository.class
 io\anastasiou\Account.class
 io\anastasiou\TransactionType.class
+io\anastasiou\TransactionException.class
 io\anastasiou\UnauthorizedException.class
+io\anastasiou\util\Authenticator.class
 io\anastasiou\Transaction.class
