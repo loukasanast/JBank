@@ -49,7 +49,12 @@ public class App
                     new BankTransactor().printBalance();
                     break;
                 case 3:
-                    new BankTransactor().transferMoney();
+                    try {
+                        new BankTransactor().transferMoney();
+                    } catch(TransactionException e) {
+                        System.out.println(e.getMessage());
+                    }
+
                     break;
                 case 4:
                     new BankTransactor().getPaid();

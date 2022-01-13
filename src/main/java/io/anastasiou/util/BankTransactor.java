@@ -36,9 +36,15 @@ public class BankTransactor implements Transactor {
     }
 
     @Override
-    public void transferMoney() {
+    public void transferMoney() throws TransactionException {
         String to;
         double amount;
+        List<Transaction> transactions = repo.getAll();
+        double result = 0;
+
+        for(int i = 0; i < transactions.size(); i++) {
+            result += transactions.get(i).getAmount();
+        }
 
         while(true) {
             System.out.println("Please, enter a recipient");
@@ -60,6 +66,10 @@ public class BankTransactor implements Transactor {
             } catch(NumberFormatException e) {
                 System.out.println("Please, enter a valid amount\n");
             }
+        }
+
+        if(amount > result) {
+            throw new TransactionException();
         }
 
         try {
