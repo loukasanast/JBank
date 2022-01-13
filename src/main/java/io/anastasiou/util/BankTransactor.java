@@ -15,6 +15,17 @@ public class BankTransactor implements Transactor {
     private static final Scanner scanner = new Scanner(System.in);
     private static final Repository<Transaction> repo = new SqlRepository();
 
+    private double getBalance() {
+        List<Transaction> transactions = repo.getAll();
+        double result = 0;
+
+        for(int i = 0; i < transactions.size(); i++) {
+            result += transactions.get(i).getAmount();
+        }
+
+        return result;
+    }
+
     @Override
     public void printTransactions() {
         List<Transaction> transactions = repo.getAll();
@@ -25,12 +36,7 @@ public class BankTransactor implements Transactor {
 
     @Override
     public void printBalance() {
-        List<Transaction> transactions = repo.getAll();
-        double result = 0;
-
-        for(int i = 0; i < transactions.size(); i++) {
-            result += transactions.get(i).getAmount();
-        }
+        double result = getBalance();
 
         System.out.printf("Balance: $%.2f\n", result);
     }
@@ -39,12 +45,6 @@ public class BankTransactor implements Transactor {
     public void transferMoney() throws TransactionException {
         String to;
         double amount;
-        List<Transaction> transactions = repo.getAll();
-        double result = 0;
-
-        for(int i = 0; i < transactions.size(); i++) {
-            result += transactions.get(i).getAmount();
-        }
 
         while(true) {
             System.out.println("Please, enter a recipient");
@@ -68,7 +68,7 @@ public class BankTransactor implements Transactor {
             }
         }
 
-        if(amount > result) {
+        if(amount > getBalance()) {
             throw new TransactionException();
         }
 
